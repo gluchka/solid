@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteOne">
+    <test name="ParametersTestOne">
+        <parameter name="myName" value="John"/>
+        <classes>
+            <class name="ParametersTest"/>
+        </classes>
+    </test>
+    <test name="ParametersTestTwo">
+        <parameter name="myName" value="Cedric"/>
+        <classes>
+            <class name="ParametersTest"/>
+        </classes>
+    </test>
+</suite>
