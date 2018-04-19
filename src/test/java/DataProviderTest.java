@@ -3,17 +3,17 @@ import org.testng.annotations.Test;
 
 public class DataProviderTest {
 
-    @DataProvider(name = "nameProvider")
+    @DataProvider(name = "listOfNumbers")
     public Object[][] createData1() {
-        return new Object[][] {
-                { "John" },
-                { "Cedric" },
+        return new Object[][]{
+                {"first", "one"},
+                {"second", "two"},
         };
     }
 
-    @Test(dataProvider = "nameProvider")
-    public void testDataProvider(String userName) throws Exception {
-        System.out.println(userName);
-        assert userName.equals("John");
+    @Test(dataProvider = "listOfNumbers")
+    public void testDataProvider(String number, String digit) throws Exception {
+        System.out.println(number + "->" + digit);
+        assert number.equals("first");
     }
 }

@@ -4,9 +4,15 @@ import org.testng.annotations.Test;
 public class ParametersTest {
 
     @Test
-    @Parameters({"myName"})
-    public void testWithParameters(String myName) throws Exception {
-        System.out.println(myName);
-        assert myName.equals("John");
+    @Parameters({"number"})
+    public void testWithParameters1(String number) throws Exception {
+        System.out.println(number);
+        assert number.equals("first");
+    }
+    @Test
+    @Parameters({"number"})
+    public void testWithParameters2(String number) throws Exception {
+        System.out.println(number);
+        assert number.equals("second");
     }
 }

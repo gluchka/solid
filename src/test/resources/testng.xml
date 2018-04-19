@@ -1,15 +1,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SuiteOne">
     <test name="ParametersTestOne">
-        <parameter name="myName" value="John"/>
+        <parameter name="number" value="first"/>
         <classes>
-            <class name="ParametersTest"/>
+            <class name="ParametersTest">
+                <methods>
+                    <include name="testWithParameters1"/>
+                </methods>
+            </class>
         </classes>
     </test>
     <test name="ParametersTestTwo">
-        <parameter name="myName" value="Cedric"/>
+        <parameter name="number" value="second"/>
         <classes>
-            <class name="ParametersTest"/>
+            <class name="ParametersTest">
+                <methods>
+                    <include name="testWithParameters2"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

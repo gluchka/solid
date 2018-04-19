@@ -4,25 +4,25 @@ import org.testng.annotations.Test;
 
 public class FactoryTest {
 
-    private String name;
+    private String number;
 
-    @Factory(dataProvider = "dp")
-    public FactoryTest(String name) {
-        this.name = name;
+    @Factory(dataProvider = "data")
+    public FactoryTest(String number) {
+        this.number = number;
     }
 
     @DataProvider
-    static public Object[][] dp() {
-        return new Object[][] {
-                new Object[] { "Anton" },
-                new Object[] { "Cedric" },
-                new Object[] { "Lenny" }
+    static public Object[][] data() {
+        return new Object[][]{
+                {"first"},
+                {"second"},
+                {"third"}
         };
     }
 
     @Test
-    public void testFabric()  {
-        System.out.println(name);
-        assert name.equals("Lenny");
+    public void testFabric() {
+        System.out.println(number);
+        assert ("firstsecondthird").contains(number);
     }
 }
